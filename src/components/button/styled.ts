@@ -11,7 +11,7 @@ export const ButtonContainer = styled.button<ButtonProps> `
     margin: 5px 8px;
     padding: 10px;  
     position: relative;
-    left: 17%;
+    left: 10%;
 
     flex-direction: column;
     justify-Content: center;  
@@ -22,7 +22,7 @@ export const ButtonContainer = styled.button<ButtonProps> `
     color: #FFF;
     border-Radius: 4px;  
     background: #1976D2;  
-    width: 476px;
+    width: 77%;
     border: none;
     cursor: pointer;
 

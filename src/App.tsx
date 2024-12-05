@@ -10,7 +10,7 @@ function App() {
       <Router>
         <GlobalStyle />
         <Routes>
-          <Route path="/login" element={<Login />}/>
+          <Route path="/" element={<Login />}/>
           <Route path="/cadastro" element={<Cadastro />}/>
         </Routes>
       </Router>
