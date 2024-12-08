@@ -17,14 +17,27 @@ export const Subtitle = styled.h5 `
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 60%;
+    width: 70%;
     padding: 8px;
 `
 export const LayoutContainer = styled.div`
     display: flex;
     height: 100vh;  // A altura vai ocupar a tela inteira
     width: 100%;
+    background: linear-gradient(90deg, #2B2D4B 29%, #171936 100%);
 `;
+
+export const ContainerCadastro = styled.div`
+    width: 75%;
+    display: flex;
+    height: 80vh;
+    justify-content: flex-start;
+    align-items: center;
+    background: #FFF;
+    border-radius: 15px;
+    position: relative;
+    left: 20%;
+`
 
 export const LateralDireito = styled.div`
     width: 100%;

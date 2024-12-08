@@ -41,7 +41,7 @@ export const ContainerLogin = styled.div`
     width: 65%;
     display: flex;
     height: 70vh;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     background: #FFF;
     border-radius: 15px;
