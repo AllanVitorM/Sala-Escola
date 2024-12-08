@@ -19,7 +19,7 @@ const Login = () => {
                         <InputPassword label="Senha"/>
                         <ContainerLink>
                             <LinkSenha>Esqueceu a senha?</LinkSenha>
-                            <LinkCadastro>Cadastre-se!</LinkCadastro>
+                            <LinkCadastro href="/cadastro">Cadastre-se!</LinkCadastro>
                         </ContainerLink>
                         <ButtonPrimary title="Login" />
                         <Subtitle>Ainda não possui conta? cadastre-se!</Subtitle>
