@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonContainer, ButtonMenu } from "./styled";
+import { ButtonContainer, ButtonMenu, ButtonSmall } from "./styled";
 
 interface ButtonProps {
   title: string;
@@ -32,5 +32,14 @@ const MenuButton: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight
   )
 }
 
+const SmallButton: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight}) => {
+  return (
+    <>
+    <ButtonSmall onClick={onClick} fontSize={fontSize} fontWeight={fontWeight}>
+      {title}
+    </ButtonSmall>  
+    </>
+  )
+}
 
-export { ButtonPrimary, MenuButton }
+export { ButtonPrimary, MenuButton, SmallButton }

@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const ContainerHeader = styled.div`
     width: 100%;
     height: 10vh;
-    background: #000;
+    background: #FFF;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin: 0 auto;
+    border: 1px solid #D9DBE6;
 `
 export const Row = styled.div`
     display: flex;
@@ -15,8 +16,11 @@ export const Row = styled.div`
 `
 
 export const UserPicture = styled.img`
-    width: 32px;
-    height: 32px;
-    border-radius: 22px;
-    background: #000
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+    display: inline-block;
+    position: relative;
+    right: 100%;
 `

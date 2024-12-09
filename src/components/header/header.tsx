@@ -1,10 +1,15 @@
+import React from 'react';
 import { ContainerHeader, Row, UserPicture } from './styled';
 
-const Header = () => {
+interface imagemProps {
+    img: string;
+}
+
+const Header: React.FC<imagemProps> = ({img}) => {
     return(
         <ContainerHeader>
             <Row>
-                <UserPicture />
+                <UserPicture src={img}/>
             </Row>
         </ContainerHeader>
     )
