@@ -20,7 +20,7 @@ const Cadastro = () => {
                             <Title>Cadastre-se!</Title>
                             <Subtitle>Agende serviços de beleza com praticidade! Cadastre-se agora e conecte-se aos melhores profissionais da sua região.</Subtitle>
                             <ContainerNameDate>                                    <InputName label="Nome *"/>
-                            <DateInput label="Data de Nasc." value={DataNasc} onChange={(newValue) => setDataNasc(newValue)}/>
+                            <DateInput label="Data de Nasc." value={DataNasc} onChange={(newValue) => setDataNasc(newValue)} width="23ch"/>
                             </ContainerNameDate>
                             <InputEmail label="Email *"/>
                             <InputConfirmarEmail label="Confirmar Email *"/>

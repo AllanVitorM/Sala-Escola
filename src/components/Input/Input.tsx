@@ -11,11 +11,11 @@ import PersonIcon from '@mui/icons-material/Person';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import IconButton from '@mui/material/IconButton';
-import WorkIcon from '@mui/icons-material/Work';
 
 interface BoxProps {
     label: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    width?: string;
 
 }
 
@@ -23,16 +23,17 @@ interface DateInputProps {
     label: string;
     value: Dayjs | null;
     onChange: (newValue: Dayjs | null) => void;
+    width?: string;
   }
   
 
-const InputEmail: React.FC<BoxProps> = ({label, onChange}) => {
+const InputEmail: React.FC<BoxProps> = ({label, onChange, width}) => {
 
     return(
             <Box
                 className="box"
                 component="form"
-                sx={{ '& > :not(style)': { m: 1, width: '60ch' } }}
+                sx={{ '& > :not(style)': { m: 1, width: {width} } }}
                 noValidate
 >
 
@@ -176,12 +177,12 @@ const InputConfirmarPassword: React.FC<BoxProps> = ({label, onChange}) => {
         </Box>
 )}
 
-const InputName: React.FC<BoxProps> = ({label, onChange}) => {
+const InputName: React.FC<BoxProps> = ({label, onChange, width}) => {
     return(
             <Box
             className="box"
             component="form"
-            sx={{ '& > :not(style)': { m: 1, width: '35ch'} }}
+            sx={{ '& > :not(style)': { m: 1, width: {width} } }}
             noValidate
             autoComplete="Name">
 
@@ -202,36 +203,11 @@ const InputName: React.FC<BoxProps> = ({label, onChange}) => {
     )
 }
 
-const InputCargo: React.FC<BoxProps> = ({label, onChange}) => {
-    return(
-            <Box
-            className="box"
-            component="form"
-            sx={{ '& > :not(style)': { m: 1, width: '60ch' }, display:'flex', }}
-            noValidate
-            autoComplete="off">
-                <TextField id="outlined-basicCargo" 
-                    label={label} 
-                    variant="outlined" 
-                    type='text' 
-                    onChange={onChange} 
-                    InputProps={{
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <WorkIcon />
-                          </InputAdornment>
-                        ),
-                      }}/>
-            </Box> 
-
-    )
-}
-
-const DateInput: React.FC<DateInputProps> = ({label, value, onChange}) => {
+const DateInput: React.FC<DateInputProps> = ({label, value, onChange, width}) => {
     return (
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <Box sx={{
-          width: '23ch',
+          width: {width},
           m: 1,
           display: 'flex',
         }}>
@@ -271,4 +247,4 @@ const CommentInput: React.FC<BoxProps> = ({label}) => {
 }
 
 
-export { InputEmail, InputConfirmarEmail ,InputPassword, InputConfirmarPassword, InputName, InputCargo, DateInput, CommentInput }
+export { InputEmail, InputConfirmarEmail ,InputPassword, InputConfirmarPassword, InputName, DateInput, CommentInput }

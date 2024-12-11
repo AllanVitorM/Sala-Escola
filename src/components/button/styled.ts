@@ -4,6 +4,8 @@ interface ButtonProps {
   fontSize?: string; // Tamanho do texto
   fontWeight?: string; // Peso do texto
   letterSpacing?: string;
+  left?: string;
+  top?: string;
 }
 
 export const ButtonContainer = styled.button<ButtonProps> `
@@ -62,6 +64,7 @@ export const ButtonContainer = styled.button<ButtonProps> `
     border: none;
     cursor: pointer;
 
+
     font-size: ${(props) => props.fontSize || "16px"};
     font-weight: ${(props) => props.fontWeight || "normal"};
     letter-spacing: ${(props) => props.letterSpacing || "0px"};
@@ -83,8 +86,9 @@ export const ButtonContainer = styled.button<ButtonProps> `
   margin: 5px 8px;
   padding: 15px 8px;  
   position: relative;
-  left: 67%;
-  top: 35%;
+  left: ${(props) => props.left || "67%"};
+  top: ${(props) => props.top || "35%"};
+
 
   flex-direction: column;
   justify-Content: center;  

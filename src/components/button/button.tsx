@@ -9,6 +9,8 @@ interface ButtonProps {
   letterSpacing?: string;
   children?: React.ReactNode;
   to?: string;
+  left?: string;
+  top?: string;
 }
 
 
@@ -32,10 +34,10 @@ const MenuButton: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight
   )
 }
 
-const SmallButton: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight}) => {
+const SmallButton: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight, left, top}) => {
   return (
     <>
-    <ButtonSmall onClick={onClick} fontSize={fontSize} fontWeight={fontWeight}>
+    <ButtonSmall onClick={onClick} fontSize={fontSize} fontWeight={fontWeight} left={left} top={top}>
       {title}
     </ButtonSmall>  
     </>
