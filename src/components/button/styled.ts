@@ -41,26 +41,27 @@ export const ButtonContainer = styled.button<ButtonProps> `
     }
   `
 
-  export const ButtonMenu = styled.button<ButtonProps> `
+  export const ButtonMenu = styled.button<ButtonProps & { isActive?: boolean }>`
     display: flex;
     margin: 5px 8px;
     padding: 10px;  
     position: relative;
     left: 10%;
     top: 30%;
-    
+    gap: 15px;
     margin-top: 10%;
 
-    flex-direction: column;
-    justify-Content: center;  
+
+    flex-direction: row;
+    justify-Content: flex-start;  
     align-Items: center;
     align-Self: stretch; 
     font-family: "Kumbh Sans", Helvetica, sans-serif;
-
-    color: #FFF;
+    padding: 8%;
+    color: ${(props) => (props.isActive ? "#DD4618" : "#FFF")};
     border-Radius: 4px;  
-    background: #202240;  
-    width: 60%;
+    background:${(props) => (props.isActive ? "#D5DAFF" : "#202240")};  
+    width: 75%;
     border: none;
     cursor: pointer;
 
@@ -75,9 +76,9 @@ export const ButtonContainer = styled.button<ButtonProps> `
   
     &:hover {
       transition: background-color 0.2s;
-      background: #FFF; 
+      background: ${(props) => (props.isActive ? "#D5DAFF" : "#FFF")};
       color: #DD4618;
-      padding: 8%;
+      padding: 10%;
     }
   `
 

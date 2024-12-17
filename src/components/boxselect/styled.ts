@@ -1,29 +1,3 @@
-export const funcionario = [
-    { label: 'João Silva', year: 1994 },
-    { label: 'Maria Souza', year: 1972 },
-    { label: 'Pedro Oliveira', year: 1974 },
-    { label: 'Ana Costa', year: 2008 },
-    { label: 'Carlos Lima', year: 1957 },
-    { label: "Julia Pereira", year: 1993 },
-    { label: 'Mariana Andrade', year: 1994 },
-    { label: 'Fernando Rocha', year: 1994 },
-
-];
-
- export const servico = [
-    { label: 'Corte de Cabelo'},
-    { label: 'Manicure'},
-    { label: 'Pedicure'},
-    { label: 'Escova'},
-    { label: 'Maquiagem'},
-    { label: "Depilação"},
-    { label: 'Limpeza de pele'},
-    { label: 'Coloração'},
-    { label: 'Massagem'},
-    { label: 'Hidratação'},
-
-];
-
  export const horario = [
     { label: '09:00 am'},
     { label: '09:30 am'},

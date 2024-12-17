@@ -16,7 +16,7 @@ interface BoxProps {
     label: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     width?: string;
-
+    value?: string;
 }
 
 interface DateInputProps {

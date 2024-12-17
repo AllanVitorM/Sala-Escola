@@ -3,10 +3,10 @@ import styled from "styled-components"
 
 export const Container = styled.div`
     width: 80%;
-    height: calc(40vh - 120px); /* Certifique-se que essa altura é adequada para o layout geral */
+    height: calc(100vh - 120px); /* Certifique-se que essa altura é adequada para o layout geral */
     overflow-y: auto;
     padding-right: 10px;
-    margin-top: 10%;
+    margin-top: 8%;
     margin-left: 7%;
     display: flex;
     justify-content: space-between;  
@@ -50,7 +50,7 @@ export const TableRow = styled.tr<{ highlight: boolean }>`
 
 // Célula da tabela
 export const TableCell = styled.td`
-  padding: 12px;
+  padding: 20px;
   font-size: 16px;
   text-align: center; /* Centraliza horizontalmente */
   vertical-align: middle; /* Centraliza verticalmente */

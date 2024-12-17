@@ -1,38 +1,29 @@
 import styled from "styled-components";
 
 interface Title {
-    left?: string;
+    margin?: string;
 }
 export const LayoutContainer = styled.div`
     display: flex;
     height: 100vh;  // A altura vai ocupar a tela inteira
     width: 100%;
     background: #F7F8FF;
-`
-
-export const MenuLateral = styled.div`
-    display:flex;
-    height: 100vh;
-    width: 15%;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    background: #202240;
+    box-sizing: border-box;
 `
 
 export const Content = styled.div`
     display: flex;
-    width: 85%;
+    width: 100%;
     flex-direction: column;
 `
 
 export const ContainerAgendamento = styled.div`
     display: flex;
     width: 40%;
-    height: 30vh;
+    height: 50vh;
     background: #FFF;
     position: relative;
-    left: 7%;
+    margin-left: 7%;
     top: 5%;
     border-radius: 10px;
     box-shadow: 0px 4px 40.3px 0px #9A9CEF40;
@@ -51,7 +42,7 @@ export const TitleAgenda = styled.h3<Title>`
     color: #0F1235;
     position: relative;
     top: 17%;
-    left: ${({ left }) => left || "5%"};
+    margin-left: ${(props) => props.margin || "7%"};
 `
 
 export const SubAgenda = styled.h6`

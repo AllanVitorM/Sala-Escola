@@ -1,5 +1,5 @@
 import { Router } from "express";
-import ClienteController from "../controllers/Cliente.controller";
+import ClienteController from "../controllers/cliente.controller";
 
 
 class ClienteRoutes {
@@ -21,7 +21,9 @@ class ClienteRoutes {
        // Deleta um genero pelo seu id
        this.router.delete("/clientes/:id", this.controller.delete);
        // Deleta todos os generos
-       this.router.delete("/clientes/", this.controller.deleteAll);
+       this.router.delete("/clientes", this.controller.deleteAll);
+       
+       this.router.post("/login", this.controller.login)
     }
 }
     export default new ClienteRoutes().router;

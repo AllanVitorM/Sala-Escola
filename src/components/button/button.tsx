@@ -1,5 +1,6 @@
 import React from "react";
 import { ButtonContainer, ButtonMenu, ButtonSmall } from "./styled";
+import { useLocation } from "react-router-dom";
 
 interface ButtonProps {
   title: string;
@@ -24,10 +25,15 @@ const ButtonPrimary: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWei
   )
 }
 
-const MenuButton: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight}) => {
+const MenuButton: React.FC<ButtonProps> = ({title, onClick, fontSize, fontWeight, children, to}) => {
+
+  const location = useLocation();
+  const isActive = location.pathname === to;
+
   return (
     <>
-    <ButtonMenu onClick={onClick} fontSize={fontSize} fontWeight={fontWeight}>
+    <ButtonMenu onClick={onClick} fontSize={fontSize} fontWeight={fontWeight} isActive={isActive}>
+      {children}
       {title}
     </ButtonMenu>  
     </>

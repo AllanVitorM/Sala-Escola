@@ -6,7 +6,6 @@ export const ContainerHeader = styled.div`
     background: #FFF;
     display: flex;
     justify-content: flex-end;
-    margin: 0 auto;
     border: 1px solid #D9DBE6;
 `
 export const Row = styled.div`
