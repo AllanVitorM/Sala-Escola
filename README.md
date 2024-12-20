@@ -1,50 +1,103 @@
-# React + TypeScript + Vite
+# Projeto Integrador - **Salão Escola**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Problemática
 
-## Expanding the ESLint configuration
+O sistema manual de agendamento do **Salão Escola** causava conflitos de horários, erros de preços, falta de registro de cancelamentos e ausência de feedback, gerando retrabalho e insatisfação geral.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Solução
 
-- Configure the top-level `parserOptions` property like this:
+Foi desenvolvido um site online de agendamentos de serviços oferecidos pelo **Salão Escola** onde: 
+- O cliente pode realizar agendamento do serviço que quer, escolher profissional, escolher o tipo de procedimento, visualizar o preço e obter um histórico de todos os serviços que já agendou;
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- O colaborador poderia disponibilizar seus horários de trabalho e visualizar os agendamentos dos clientes. 
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Diferencial 
+- Automatização do sistema de agendamento
+- Funcionário e cliente poderem visualizar os agendamentos 
+- Rapidez e controle no agendamentos
+- Notificações com os agendamentos
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Tecnologias Utilizadas
+
+#### UI/UX
+    - Design System 
+    - Prototipação com Figma
+    - Acessibilidade
+    - Arquitetura da Informação 
+    - Pitch
+
+#### Front-end
+    - React
+    - Typescript
+    - Styled-components
+    - MUI (Biblioteca de componentes React)
+
+#### Back-end
+    - Typescript
+    - NodeJS
+    - TypeORM
+    - MySQL
+
+---
+## Configuração do Ambiente
+
+#### Requisitos
+
+1. **Node.js**: Instale o Node.js na versão `18.17.0`.
+2. **nvm**: Instale o Node Version Manager para facilitar a gestão de versões do Node.js.
+3. **npm**: Instale as dependências.
+
+#### Instalação
+
+Clone o repositório:
+
+   ```bash
+   git clone https://github.com/AllanVitorM/Salao-Escola.git
+   ```
+
+#### Configurar o Frontend
+
+1. Use a versão do Node.js especificada:
+
+    ```bash
+    nvm use
+    ```
+
+2. Instale as dependências do frontend:
+
+    ```bash
+    npm install
+    ```
+#### Configurar o Backend
+
+1. Navegue até a pasta do Backend:
+
+    ```bash
+    cd backend
+    ```
+2. Configure o seu config.ts para você utilizar o MySQL com o mesmo login e senha <br><br>
+
+3. Instale as dependências do backend:
+
+    ```bash
+    npm install
+    ```
+---
+
+## Executando o Projeto
+
+#### Backend
+Para iniciar o Backend, execute:
+
+    npm run dev
+
+#### Frontend
+Para iniciar o frontend, execute:
+
+    npm run dev
+
+---
