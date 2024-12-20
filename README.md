@@ -19,6 +19,12 @@ Foi desenvolvido um site online de agendamentos de serviços oferecidos pelo **S
 - Rapidez e controle no agendamentos
 - Notificações com os agendamentos
 
+## Futuras Melhorias
+
+- Haverá um encaminhamento para o setor financeiro de contas pagas;
+- O cliente poder ter o histórico de procedimentos pagos e pendentes;
+- Ser possível pagar os serviços pelo site.
+
 ---
 
 ## Tecnologias Utilizadas
